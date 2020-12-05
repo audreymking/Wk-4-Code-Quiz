@@ -1,3 +1,4 @@
+
 //START BUTTON
 //Button through HTML-- connect it to JS
 //click event listener
@@ -14,6 +15,26 @@
 //DOM-- innerHTML
 //boolean to if answer is true or false, store answer in variable
 
+
+var choiceSelection = [{
+  prompt: "These are examples of array methods except:",
+  options: ["concat()",
+            "findIndex()", 
+            "splice()", 
+            "stand()"],
+  answer: "stand()"
+},
+{
+  prompt: "Why are loops important in Javascript?",
+  options: ["Saves time and allows a piece of code to be ran more than once",
+            "Changes the color of buttons",
+            "Always sends an alert to the user when the code is ran"],
+  answer: "Saves time and allows a piece of code to be ran more than once"
+}
+
+
+]
+console.log(choiceSelection)
 
 // DEDUCT TIME IF INCORRECT ANSWER
 //JS boolean- deducts time if false
