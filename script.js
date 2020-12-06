@@ -1,4 +1,5 @@
 
+
 //START BUTTON
 //Button through HTML-- connect it to JS
 //click event listener
@@ -9,43 +10,101 @@
 //set timout, setinterval
 //append, innerHTML, textcontent-- DOM- parentNodes
 
-// PRESENT QUESTIONS
-//when a button is selected- selection is recorded and next question is presented
-//JS controls when the text is shown
-//DOM-- innerHTML
-//boolean to if answer is true or false, store answer in variable
+  
+
+  
+
+  // PRESENT QUESTIONS
+  //when a button is selected- selection is recorded and next question is presented
+  //JS controls when the text is shown
+  //DOM-- innerHTML
+  //boolean to if answer is true or false, store answer in variable
+
+var quizSection = document.getElementById("quizSection");
 
 
-var choiceSelection = [{
-  prompt: "These are examples of array methods except:",
-  options: ["concat()",
-            "findIndex()", 
-            "splice()", 
-            "stand()"],
-  answer: "stand()"
-},
-{
-  prompt: "Why are loops important in Javascript?",
-  options: ["Saves time and allows a piece of code to be ran more than once",
-            "Changes the color of buttons",
-            "Always sends an alert to the user when the code is ran"],
-  answer: "Saves time and allows a piece of code to be ran more than once"
+fuction startQuiz() {
+  
 }
 
 
-]
-console.log(choiceSelection)
 
-// DEDUCT TIME IF INCORRECT ANSWER
-//JS boolean- deducts time if false
-//if false, change: the timer variable
 
-// GAME OVER- RESULTS
-//When questions are finshed then display results page
-//if timer runs out then display results page
-// if variable is 0 display- innerHTML
-// varible-- object. round variable to keep track of questions
+  var choiceSelection = [{
+    prompt: "These are examples of array methods except:",
+    options: {
+      d: "concat()",
+      c: "findIndex()",
+      b: "splice()",
+      a: "stand()",
+    },
+    answer: "stand()"
+  },
+  {
+    prompt: "Why are loops important in Javascript?",
+    options: {
+      a: "Saves time and allows a piece of code to be ran more than once",
+      b: Changes the color of buttons",
+      c: "Always sends an alert to the user when the code is ran"
+    },
+    answer: "Saves time and allows a piece of code to be ran more than once"
+  },
+  {
+    prompt: "True or false: jQuery can simplify Javascript and can manipulate the DOM.",
+    options: {
+      a: "True",
+      b: "False"],
+    answer: "True"
+  }
+  ]
 
-// HIGH SCORE
-//form to fill out and save initals
-//use local storage
+
+  console.log(choiceSelection)
+  var score = 0;
+
+  for (var i = 0; i < choiceSelection.length; i++) {
+    var answer= (choiceSelection[i].o)
+  }
+
+
+
+ 
+
+  //starts the questions on the first array
+  var quizPrompt = -1;
+
+  //starts the loop of arrays
+  function questionLoop() {
+    //changes the arrays after each loop
+    quizPrompt++
+
+    var showPrompt = "<div>" + choiceSelection[quizPrompt].prompt + "</div>"
+
+    
+    
+    document.getElementById("quizSection").innerHTML = quizContent;
+
+    //to stop quiz 
+    if (quizPrompt > choiceSelection.length - 1) {
+      return;
+    };
+  };
+
+//start();
+  // DEDUCT TIME IF INCORRECT ANSWER
+  //JS boolean- deducts time if false
+  //if false, change: the timer variable
+
+ 
+
+
+  // GAME OVER- RESULTS
+  //When questions are finshed then display results page
+  //if timer runs out then display results page
+  // if variable is 0 display- innerHTML
+  // varible-- object. round variable to keep track of questions
+
+  // HIGH SCORE
+  //form to fill out and save initals
+  //use local stor
+

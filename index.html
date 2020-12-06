@@ -11,11 +11,12 @@
   <link rel="secondstylesheet" href="style.css" />
 
   <title>Coding Quiz Challenge</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
   <!--Header begin-->
-  <div id="nav">
+  <div id="empty-nav">
    <!-- link to high score-->
     <div class="right">
       <a onclick="showScore()" >
@@ -34,8 +35,8 @@
   <!-- end of header-->
 
   <!--Area for quiz questions-->
-  <div class="container-fluid">
-    
+  <div class="container">
+    <div id="buttons"></div>
     <div id="showQuiz">
       <div id="quizSection">
         <h2>Test Your Javascript Knowledge</h2>
