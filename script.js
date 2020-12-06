@@ -82,7 +82,7 @@ fuction startQuiz() {
 
     
     
-    document.getElementById("quizSection").innerHTML = quizContent;
+    document.getElementById("quizSection").innerHTML = quizSelection;
 
     //to stop quiz 
     if (quizPrompt > choiceSelection.length - 1) {
